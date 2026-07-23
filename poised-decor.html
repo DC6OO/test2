@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poised Décor — Connie's Cake Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.png" type="image/png" sizes="any" />
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="images/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main">
+        <a class="logo" href="index.html"><img src="images/logo.png" alt="" width="112" height="112" /><span class="logo-text">Connie's Cake Shop</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="nav-dropdown">
+            <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Our Services
+              <span class="nav-dropdown-caret" aria-hidden="true"></span>
+            </button>
+            <ul class="nav-dropdown-menu" hidden>
+              <li><a href="services.html">All Services</a></li>
+              <li><a href="celebration-cakes.html">Celebration Cakes</a></li>
+              <li><a href="wedding-cakes.html">Wedding Cakes</a></li>
+              <li><a href="catering.html">Catering &amp; Pastries</a></li>
+              <li><a href="poised-decor.html">Poised Décor</a></li>
+            </ul>
+          </li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="owner.html">Owner</a>
+          <a class="btn btn-primary" href="order.html">Order Now</a>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">Our Services</p>
+          <h1>Poised Décor</h1>
+          <p class="page-lede">Event styling that turns ordinary spaces into unforgettable experiences.</p>
+          <div class="page-hero-actions">
+            <a class="btn btn-primary" href="order.html">Order Now</a>
+            <a class="btn btn-ghost" href="#enquiry">Request a Quote</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/260970391674" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section"><div class="container"><h2>Introduction</h2><p class="section-intro">Poised Décor brings thoughtful styling to your celebration — coordinated, elegant, and personal.</p></div></section>
+      <section class="section section-alt"><div class="container"><h2>Event styling</h2>
+        <ul class="why-grid">
+          <li><strong>Weddings</strong><span>Reception and ceremony styling support.</span></li>
+          <li><strong>Birthdays</strong><span>Theme-led décor for milestone moments.</span></li>
+          <li><strong>Baby Showers</strong><span>Soft, celebratory setups.</span></li>
+          <li><strong>Corporate Events</strong><span>Polished looks for launches and gatherings.</span></li>
+        </ul>
+      </div></section>
+      <section class="section"><div class="container"><h2>Consultation &amp; quotes</h2><p>Book a consultation or request a quote — share your date, venue, and style preferences below.</p></div></section>
+
+      <section class="section section-alt" id="enquiry">
+        <div class="container narrow-form">
+          <h2>Enquiry form</h2>
+          <p class="muted">Tell us what you need — we’ll respond with next steps.</p>
+          <form class="enquiry-form" data-enquiry-form data-enquiry-type="Poised Décor enquiry" action="#" method="post">
+            <label>Full name<input type="text" name="name" required /></label>
+            <label>Phone<input type="tel" name="phone" required /></label>
+            <label>Email<input type="email" name="email" /></label>
+            <label>Date needed<input type="date" name="eventDate" /></label>
+            <label>Details<textarea name="message" rows="4" required placeholder="Guests, style, flavours, budget…"></textarea></label>
+            <button type="submit" class="btn btn-primary">Send enquiry</button>
+            <p class="owner-hint muted" data-enquiry-status hidden></p>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="logo footer-logo" href="index.html"><img src="images/logo.png" alt="" width="80" height="80" /><span class="logo-text">Connie's Cake Shop</span></a>
+          <p>Couture cakes, catering &amp; poised décor.</p>
+          <p class="footer-hours"><strong>Hours</strong><br />Mon–Sat · 9:00–18:00<br />Sunday · By appointment</p>
+        </div>
+        <div>
+          <p class="footer-heading">Quick links</p>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="order.html">Order Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Our Services</p>
+          <ul class="footer-links">
+            <li><a href="celebration-cakes.html">Celebration Cakes</a></li>
+            <li><a href="wedding-cakes.html">Wedding Cakes</a></li>
+            <li><a href="catering.html">Catering &amp; Pastries</a></li>
+            <li><a href="poised-decor.html">Poised Décor</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Connect</p>
+          <div class="footer-socials">
+            <a class="btn btn-whatsapp" href="https://wa.me/260970391674" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a class="btn btn-instagram" href="https://www.instagram.com/connies_cakeshop?igsh=MXNkOHZtdmk0Ynd3bA==" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="btn btn-tiktok" href="https://www.tiktok.com/@connies_cakeshop?_r=1&_t=ZS-98Bi15iwoNg" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <a class="btn btn-ghost btn-social-light" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a class="btn btn-ghost btn-social-light" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
+          </div>
+          <p class="footer-phones">
+            <a href="tel:0972107613">0972107613</a>
+            <span aria-hidden="true">·</span>
+            <a href="tel:0970391674">0970391674</a>
+          </p>
+        </div>
+      </div>
+      <div class="container footer-copy">
+        <p class="muted">© <span data-year></span> Connie's Cake Shop. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="email-config.js"></script>
+    <script src="enquiry.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

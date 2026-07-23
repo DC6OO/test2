@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Owner login — Connie's Cake Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.png" type="image/png" sizes="any" />
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="images/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+        <header class="site-header">
+      <nav class="nav" aria-label="Main">
+        <a class="logo" href="index.html"><img src="images/logo.png" alt="" width="112" height="112" /><span class="logo-text">Connie's Cake Shop</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="nav-dropdown">
+            <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Our Services
+              <span class="nav-dropdown-caret" aria-hidden="true"></span>
+            </button>
+            <ul class="nav-dropdown-menu" hidden>
+              <li><a href="services.html">All Services</a></li>
+              <li><a href="celebration-cakes.html">Celebration Cakes</a></li>
+              <li><a href="wedding-cakes.html">Wedding Cakes</a></li>
+              <li><a href="catering.html">Catering &amp; Pastries</a></li>
+              <li><a href="poised-decor.html">Poised Décor</a></li>
+            </ul>
+          </li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="owner.html">Owner</a>
+          <a class="btn btn-primary" href="order.html">Order Now</a>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="page-owner">
+      <div class="container owner-inner owner-inner-wide">
+        <section id="owner-login" class="owner-login" data-owner-login>
+          <p class="eyebrow owner-eyebrow">Staff only</p>
+          <h1>Owner login</h1>
+          <p class="owner-lede">Enter the owner password to manage orders, products, gallery, and homepage backgrounds.</p>
+          <form id="owner-login-form" class="owner-login-form" action="#" method="post">
+            <label>
+              Password
+              <input
+                type="password"
+                name="password"
+                id="owner-password"
+                autocomplete="current-password"
+                required
+              />
+            </label>
+            <p class="owner-login-error" id="owner-login-error" hidden></p>
+            <button type="submit" class="btn btn-primary btn-lg" id="owner-login-submit">
+              Log in
+            </button>
+          </form>
+        </section>
+
+        <div id="owner-dashboard" class="owner-dashboard" data-owner-dashboard hidden>
+          <header class="owner-page-header">
+            <p class="eyebrow owner-eyebrow">Shop dashboard</p>
+            <h1>Owner panel</h1>
+            <p class="owner-lede">
+              Manage orders, products, gallery photos, and the changing homepage backgrounds.
+            </p>
+            <div class="owner-toolbar">
+              <button type="button" class="btn btn-ghost" id="owner-logout">Log out</button>
+              <a class="btn btn-primary" href="order.html">Open order pages</a>
+            </div>
+          </header>
+
+          <div class="owner-tabs" role="tablist" aria-label="Owner sections">
+            <button type="button" class="owner-tab is-active" data-owner-tab="orders" role="tab" aria-selected="true">
+              Orders
+            </button>
+            <button type="button" class="owner-tab" data-owner-tab="products" role="tab" aria-selected="false">
+              Products
+            </button>
+            <button type="button" class="owner-tab" data-owner-tab="gallery" role="tab" aria-selected="false">
+              Gallery
+            </button>
+            <button type="button" class="owner-tab" data-owner-tab="background" role="tab" aria-selected="false">
+              Background
+            </button>
+          </div>
+
+          <section class="owner-panel is-active" data-owner-panel="orders">
+            <div class="owner-toolbar">
+              <button type="button" class="btn btn-ghost" id="owner-refresh">Refresh</button>
+              <button type="button" class="btn btn-ghost owner-danger" id="owner-clear-all">
+                Clear all orders
+              </button>
+            </div>
+            <p class="owner-hint muted" id="owner-storage-hint" hidden></p>
+            <div id="owner-empty" class="owner-empty">
+              <p>No orders yet.</p>
+              <p class="muted">When a customer submits an order, it will appear here.</p>
+            </div>
+            <div id="owner-orders-list" class="owner-orders-list" data-owner-list></div>
+          </section>
+
+          <section class="owner-panel" data-owner-panel="products" hidden>
+            <h2 class="owner-panel-title">Add or update a product</h2>
+            <p class="muted owner-panel-intro">
+              Upload a photo, set the price, and choose cakes or finger foods. Photos are stored in
+              cloud storage — you do not need to add image files to the website folder.
+            </p>
+            <form id="product-form" class="admin-form" action="#" method="post">
+              <input type="hidden" name="id" id="product-id" value="" />
+              <label>
+                Product name
+                <input type="text" name="name" id="product-name" required placeholder="e.g. Small 6inch Cake" />
+              </label>
+              <label>
+                Price (K)
+                <input type="number" name="price" id="product-price" required min="0" step="1" placeholder="750" />
+              </label>
+              <label>
+                Category
+                <select name="category" id="product-category" required>
+                  <option value="cakes">Cakes</option>
+                  <option value="finger-foods">Finger Foods</option>
+                </select>
+              </label>
+              <label>
+                Flavours / pack types (comma-separated)
+                <input
+                  type="text"
+                  name="flavors"
+                  id="product-flavors"
+                  placeholder="Vanilla, Chocolate, Red velvet"
+                />
+              </label>
+              <label>
+                Product photo
+                <input type="file" name="image" id="product-image" accept="image/*" />
+              </label>
+              <div class="admin-preview" id="product-preview" hidden>
+                <img id="product-preview-img" alt="Product preview" />
+              </div>
+              <div class="admin-form-actions">
+                <button type="submit" class="btn btn-primary" id="product-save-btn">Save product</button>
+                <button type="button" class="btn btn-ghost" id="product-reset-btn">Clear form</button>
+              </div>
+              <p class="owner-hint muted" id="product-form-status" hidden></p>
+            </form>
+
+            <h2 class="owner-panel-title">Your products</h2>
+            <div class="admin-filter">
+              <button type="button" class="btn btn-ghost btn-sm is-active" data-product-filter="all">All</button>
+              <button type="button" class="btn btn-ghost btn-sm" data-product-filter="cakes">Cakes</button>
+              <button type="button" class="btn btn-ghost btn-sm" data-product-filter="finger-foods">Finger Foods</button>
+            </div>
+            <div id="admin-products-list" class="admin-products-list"></div>
+          </section>
+
+          <section class="owner-panel" data-owner-panel="gallery" hidden>
+            <h2 class="owner-panel-title">Add a gallery photo</h2>
+            <p class="muted owner-panel-intro">
+              Photos added here appear in the homepage gallery.
+            </p>
+            <form id="gallery-form" class="admin-form" action="#" method="post">
+              <label>
+                Caption
+                <input type="text" name="caption" id="gallery-caption" required placeholder="e.g. Pearl wedding cake" />
+              </label>
+              <label>
+                Photo
+                <input type="file" name="image" id="gallery-image" accept="image/*" required />
+              </label>
+              <div class="admin-preview" id="gallery-preview" hidden>
+                <img id="gallery-preview-img" alt="Gallery preview" />
+              </div>
+              <div class="admin-form-actions">
+                <button type="submit" class="btn btn-primary">Add to gallery</button>
+              </div>
+              <p class="owner-hint muted" id="gallery-form-status" hidden></p>
+            </form>
+
+            <h2 class="owner-panel-title">Gallery photos</h2>
+            <div id="admin-gallery-list" class="admin-gallery-list"></div>
+          </section>
+
+          <section class="owner-panel" data-owner-panel="background" hidden>
+            <h2 class="owner-panel-title">Edit homepage backgrounds</h2>
+            <p class="muted owner-panel-intro">
+              These slides rotate on the homepage hero. Photos are saved to cloud storage.
+            </p>
+            <form id="slide-form" class="admin-form" action="#" method="post">
+              <input type="hidden" name="id" id="slide-id" value="" />
+              <label>
+                Small label (eyebrow)
+                <input type="text" name="eyebrow" id="slide-eyebrow" required placeholder="e.g. Wedding collection" />
+              </label>
+              <label>
+                Headline
+                <input type="text" name="title" id="slide-title" required placeholder="e.g. Pearl & ivory tiers" />
+              </label>
+              <label class="admin-check">
+                <input type="checkbox" name="brandTitle" id="slide-brand-title" />
+                Use brand-style headline (for shop name)
+              </label>
+              <label>
+                Supporting text
+                <textarea name="lede" id="slide-lede" rows="2" required placeholder="Short line under the headline"></textarea>
+              </label>
+              <label>
+                Background photo
+                <input type="file" name="image" id="slide-image" accept="image/*" />
+              </label>
+              <div class="admin-preview" id="slide-preview" hidden>
+                <img id="slide-preview-img" alt="Background preview" />
+              </div>
+              <div class="admin-form-actions">
+                <button type="submit" class="btn btn-primary" id="slide-save-btn">Save slide</button>
+                <button type="button" class="btn btn-ghost" id="slide-reset-btn">Clear form</button>
+              </div>
+              <p class="owner-hint muted" id="slide-form-status" hidden></p>
+            </form>
+
+            <h2 class="owner-panel-title">Current backgrounds</h2>
+            <div id="admin-slides-list" class="admin-gallery-list"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+        <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="logo footer-logo" href="index.html"><img src="images/logo.png" alt="" width="80" height="80" /><span class="logo-text">Connie's Cake Shop</span></a>
+          <p>Couture cakes, catering &amp; poised décor.</p>
+          <p class="footer-hours"><strong>Hours</strong><br />Mon–Sat · 9:00–18:00<br />Sunday · By appointment</p>
+        </div>
+        <div>
+          <p class="footer-heading">Quick links</p>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="order.html">Order Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Our Services</p>
+          <ul class="footer-links">
+            <li><a href="celebration-cakes.html">Celebration Cakes</a></li>
+            <li><a href="wedding-cakes.html">Wedding Cakes</a></li>
+            <li><a href="catering.html">Catering &amp; Pastries</a></li>
+            <li><a href="poised-decor.html">Poised Décor</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Connect</p>
+          <div class="footer-socials">
+            <a class="btn btn-whatsapp" href="https://wa.me/260970391674" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a class="btn btn-instagram" href="https://www.instagram.com/connies_cakeshop?igsh=MXNkOHZtdmk0Ynd3bA==" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="btn btn-tiktok" href="https://www.tiktok.com/@connies_cakeshop?_r=1&_t=ZS-98Bi15iwoNg" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <a class="btn btn-ghost btn-social-light" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a class="btn btn-ghost btn-social-light" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
+          </div>
+          <p class="footer-phones">
+            <a href="tel:0972107613">0972107613</a>
+            <span aria-hidden="true">·</span>
+            <a href="tel:0970391674">0970391674</a>
+          </p>
+        </div>
+      </div>
+      <div class="container footer-copy">
+        <p class="muted">© <span data-year></span> Connie's Cake Shop. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="shop-sync.js"></script>
+    <script src="menu-items.js"></script>
+    <script src="shop-data.js"></script>
+    <script src="image-storage.js"></script>
+    <script src="script.js"></script>
+    <script src="owner.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

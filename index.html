@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connie's Cake Shop — Couture Cakes &amp; Celebrations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.png" type="image/png" sizes="any" />
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="images/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main">
+        <a class="logo" href="index.html"><img src="images/logo.png" alt="" width="112" height="112" /><span class="logo-text">Connie's Cake Shop</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="nav-dropdown">
+            <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Our Services
+              <span class="nav-dropdown-caret" aria-hidden="true"></span>
+            </button>
+            <ul class="nav-dropdown-menu" hidden>
+              <li><a href="services.html">All Services</a></li>
+              <li><a href="celebration-cakes.html">Celebration Cakes</a></li>
+              <li><a href="wedding-cakes.html">Wedding Cakes</a></li>
+              <li><a href="catering.html">Catering &amp; Pastries</a></li>
+              <li><a href="poised-decor.html">Poised Décor</a></li>
+            </ul>
+          </li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="owner.html">Owner</a>
+          <a class="btn btn-primary" href="order.html">Order Now</a>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="hero" aria-label="Featured bakes" id="home">
+        <div class="slideshow" data-slideshow>
+          <div data-slideshow-slides></div>
+          <div class="slideshow-controls">
+            <button type="button" class="slideshow-btn prev" data-prev aria-label="Previous slide">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </button>
+            <button type="button" class="slideshow-btn next" data-next aria-label="Next slide">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </button>
+          </div>
+          <div class="slideshow-dots" role="tablist" aria-label="Slide selection"></div>
+        </div>
+        <div class="hero-cta-bar">
+          <p class="hero-tagline">Couture cakes, catering &amp; poised décor — made with care for life's beautiful moments.</p>
+          <div class="hero-cta-actions">
+            <a class="btn btn-primary" href="order.html">Order Now</a>
+            <a class="btn btn-light" href="services.html">View Our Services</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="featured-services">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Our Services</p>
+            <h2>Featured services</h2>
+            <p>Four ways we help you celebrate — each crafted with care and attention to detail.</p>
+          </div>
+          <div class="service-card-grid">
+            <a class="service-card" href="celebration-cakes.html">
+              <div class="service-card-media" style="background-image:url('images/monster-cake.png')"></div>
+              <div class="service-card-body">
+                <h3>Celebration Cakes</h3>
+                <p>Birthday, graduation, and custom cakes designed for your occasion.</p>
+                <span class="btn btn-primary btn-sm">Explore</span>
+              </div>
+            </a>
+            <a class="service-card" href="wedding-cakes.html">
+              <div class="service-card-media" style="background-image:url('images/wedding-pearl-cake.png')"></div>
+              <div class="service-card-body">
+                <h3>Wedding Cakes</h3>
+                <p>Elegant tiers and flavours for your wedding day.</p>
+                <span class="btn btn-primary btn-sm">Explore</span>
+              </div>
+            </a>
+            <a class="service-card" href="catering.html">
+              <div class="service-card-media" style="background-image:url('images/cake-slices.png')"></div>
+              <div class="service-card-body">
+                <h3>Catering &amp; Pastries</h3>
+                <p>Finger foods, pastries, and catering for gatherings of every size.</p>
+                <span class="btn btn-primary btn-sm">Explore</span>
+              </div>
+            </a>
+            <a class="service-card" href="poised-decor.html">
+              <div class="service-card-media" style="background-image:url('images/wedding-rose-cake.png')"></div>
+              <div class="service-card-body">
+                <h3>Poised Décor</h3>
+                <p>Thoughtful styling for weddings, birthdays, and special moments.</p>
+                <span class="btn btn-primary btn-sm">Explore</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="why-us">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Why us</p>
+            <h2>Why choose Connie's Cake Shop</h2>
+          </div>
+          <ul class="why-points">
+            <li><strong>Custom Designs</strong> — Made for your celebration, not off the shelf.</li>
+            <li><strong>Premium Quality</strong> — Ingredients and finishes you can taste and see.</li>
+            <li><strong>Freshly Made</strong> — Prepared to order for peak flavour and beauty.</li>
+            <li><strong>Professional Service</strong> — Clear communication from enquiry to delivery.</li>
+            <li><strong>Reliable Delivery</strong> — Careful handling so your order arrives ready.</li>
+            <li><strong>Attention to Detail</strong> — Every element considered with care.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="gallery-preview">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Gallery</p>
+            <h2>Featured work</h2>
+            <p>A glimpse of recent creations — more awaits in the full gallery.</p>
+          </div>
+          <div
+            class="slideshow gallery-slideshow gallery-slideshow-preview"
+            data-slideshow
+            data-gallery-slideshow
+            data-gallery-limit="4"
+            data-interval="5000"
+            aria-label="Featured gallery slideshow"
+          >
+            <div data-slideshow-slides data-gallery-slides></div>
+            <div class="slideshow-controls">
+              <button type="button" class="slideshow-btn prev" data-prev aria-label="Previous photo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <button type="button" class="slideshow-btn next" data-next aria-label="Next photo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="slideshow-dots" role="tablist" aria-label="Gallery slides"></div>
+          </div>
+          <div class="section-actions">
+            <a class="btn btn-primary" href="gallery.html">View Gallery</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="testimonials">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Kind words</p>
+            <h2>Testimonials</h2>
+          </div>
+          <div class="testimonial-grid">
+            <blockquote class="testimonial">
+              <p>“The cake was stunning and tasted even better. Connie made our day unforgettable.”</p>
+              <cite>— Happy client</cite>
+            </blockquote>
+            <blockquote class="testimonial">
+              <p>“Professional, warm, and so creative. Our guests are still talking about the desserts.”</p>
+              <cite>— Celebration host</cite>
+            </blockquote>
+            <blockquote class="testimonial">
+              <p>“From the first message to delivery, everything felt personal and carefully handled.”</p>
+              <cite>— Wedding couple</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="meet-connie">
+        <div class="container about-who-grid meet-preview">
+          <div class="about-who-copy">
+            <p class="eyebrow">The heart behind the brand</p>
+            <h2>Meet Connie</h2>
+            <p>Every cake tells a story, and Connie’s story is one of faith, courage, creativity, and purpose — creating beautiful cakes and memorable experiences that bring joy.</p>
+            <div class="page-hero-actions">
+              <a class="btn btn-primary" href="about.html">Read Our Story</a>
+            </div>
+          </div>
+          <div class="about-who-photo" style="background-image:url('images/connie-about.png')" role="img" aria-label="Connie with a celebration cake"></div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="social">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Follow along</p>
+            <h2>Social media</h2>
+            <p>Behind-the-scenes moments, inspiration, and celebrations — join us online.</p>
+          </div>
+          <div class="social-row">
+            <a class="btn btn-primary" href="https://www.instagram.com/connies_cakeshop?igsh=MXNkOHZtdmk0Ynd3bA==" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="btn btn-ghost" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a class="btn btn-ghost" href="https://www.tiktok.com/@connies_cakeshop?_r=1&_t=ZS-98Bi15iwoNg" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <a class="btn btn-ghost" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/260970391674" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-band" id="final-cta">
+        <div class="container cta-inner">
+          <div>
+            <h2>Let's create something beautiful</h2>
+            <p>Enquire or place an order — we would love to celebrate with you.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary btn-lg" href="order.html">Order Now</a>
+            <a class="btn btn-ghost btn-lg" href="contact.html#quote">Request a Quote</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="logo footer-logo" href="index.html"><img src="images/logo.png" alt="" width="80" height="80" /><span class="logo-text">Connie's Cake Shop</span></a>
+          <p>Couture cakes, catering &amp; poised décor.</p>
+          <p class="footer-hours"><strong>Hours</strong><br />Mon–Sat · 9:00–18:00<br />Sunday · By appointment</p>
+        </div>
+        <div>
+          <p class="footer-heading">Quick links</p>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="order.html">Order Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Our Services</p>
+          <ul class="footer-links">
+            <li><a href="celebration-cakes.html">Celebration Cakes</a></li>
+            <li><a href="wedding-cakes.html">Wedding Cakes</a></li>
+            <li><a href="catering.html">Catering &amp; Pastries</a></li>
+            <li><a href="poised-decor.html">Poised Décor</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Connect</p>
+          <div class="footer-socials">
+            <a class="btn btn-whatsapp" href="https://wa.me/260970391674" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a class="btn btn-instagram" href="https://www.instagram.com/connies_cakeshop?igsh=MXNkOHZtdmk0Ynd3bA==" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="btn btn-tiktok" href="https://www.tiktok.com/@connies_cakeshop?_r=1&_t=ZS-98Bi15iwoNg" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <a class="btn btn-ghost btn-social-light" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a class="btn btn-ghost btn-social-light" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
+          </div>
+          <p class="footer-phones">
+            <a href="tel:0972107613">0972107613</a>
+            <span aria-hidden="true">·</span>
+            <a href="tel:0970391674">0970391674</a>
+          </p>
+        </div>
+      </div>
+      <div class="container footer-copy">
+        <p class="muted">© <span data-year></span> Connie's Cake Shop. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="shop-sync.js"></script>
+    <script src="shop-data.js"></script>
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+    <script src="slideshow-render.js"></script>
+  </body>
+</html>

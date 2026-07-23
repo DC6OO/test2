@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order finger foods — Connie's Cake Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.png" type="image/png" sizes="any" />
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="images/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-order-category="finger-foods">
+        <header class="site-header">
+      <nav class="nav" aria-label="Main">
+        <a class="logo" href="index.html"><img src="images/logo.png" alt="" width="112" height="112" /><span class="logo-text">Connie's Cake Shop</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="nav-dropdown">
+            <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Our Services
+              <span class="nav-dropdown-caret" aria-hidden="true"></span>
+            </button>
+            <ul class="nav-dropdown-menu" hidden>
+              <li><a href="services.html">All Services</a></li>
+              <li><a href="celebration-cakes.html">Celebration Cakes</a></li>
+              <li><a href="wedding-cakes.html">Wedding Cakes</a></li>
+              <li><a href="catering.html">Catering &amp; Pastries</a></li>
+              <li><a href="poised-decor.html">Poised Décor</a></li>
+            </ul>
+          </li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="owner.html">Owner</a>
+          <a class="btn btn-primary" href="order.html">Order Now</a>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="page-order">
+      <div class="container order-page-inner">
+        <header class="order-page-header">
+          <p class="eyebrow order-eyebrow">Finger foods</p>
+          <h1>Order finger foods</h1>
+          <p class="order-lede">
+            Choose frozen or cooked packs from our savoury menu. Want a celebration cake instead?
+            <a href="cakes.html">Order cakes</a>.
+          </p>
+        </header>
+
+        <section class="order-price-preview">
+          <h2 class="food-menu-title">Finger foods</h2>
+          <div class="product-slideshow" data-product-slideshow>
+            <div class="product-slideshow-viewport">
+              <div class="product-slideshow-track" data-product-slides></div>
+            </div>
+            <div class="product-slideshow-controls">
+              <button type="button" class="slideshow-btn prev" data-product-prev aria-label="Previous product">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <button type="button" class="slideshow-btn next" data-product-next aria-label="Next product">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="product-slideshow-dots" data-product-dots role="tablist" aria-label="Product slides"></div>
+          </div>
+        </section>
+
+        <form id="pastry-order-form" class="pastry-order-form" action="#" method="post" novalidate>
+          <div class="order-layout">
+            <div class="order-builder">
+              <h2 class="order-builder-title">Your finger food order</h2>
+              <div id="order-lines" class="order-lines" data-order-lines></div>
+
+              <button type="button" class="btn btn-ghost add-pastry-btn" id="add-pastry-line">
+                + Add another finger food
+              </button>
+
+              <label class="order-contact-label">
+                Phone number
+                <input
+                  type="tel"
+                  name="phone"
+                  id="order-phone"
+                  class="order-phone"
+                  required
+                  autocomplete="tel"
+                  inputmode="tel"
+                  placeholder="e.g. 0977 123 456"
+                />
+              </label>
+
+              <label class="order-notes-label">
+                Special requests (optional)
+                <textarea
+                  name="notes"
+                  rows="3"
+                  placeholder="Pickup time, mix of packs, allergies…"
+                  class="order-notes"
+                ></textarea>
+              </label>
+            </div>
+
+            <aside class="order-summary-card" aria-labelledby="summary-heading">
+              <h2 id="summary-heading" class="order-summary-title">Order summary</h2>
+              <ul id="order-summary-list" class="order-summary-list" data-summary-list></ul>
+              <p class="order-summary-empty" data-summary-empty>No items yet — choose finger foods above.</p>
+              <div class="order-summary-total" data-summary-total-wrap hidden>
+                <span>Estimated total</span>
+                <strong data-summary-total>K0</strong>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg order-submit" id="submit-order">
+                Place finger food order
+              </button>
+              <p class="order-footnote">
+                Orders are sent on WhatsApp to <strong>0972107613</strong>
+                and emailed to <strong id="order-notify-email">Kabusweck311@gmail.com</strong>.
+                Use the site via <strong>http://localhost:5500</strong> (run start-server.bat).
+              </p>
+            </aside>
+          </div>
+        </form>
+
+        <div
+          class="order-toast"
+          id="order-toast"
+          role="status"
+          aria-live="polite"
+          hidden
+          data-order-toast
+        ></div>
+      </div>
+    </main>
+
+    <template id="order-line-template">
+      <div class="order-line" data-order-line>
+        <div class="order-line-fields">
+          <label class="order-field">
+            Item
+            <select class="order-pastry" name="pastry" required></select>
+          </label>
+          <label class="order-field">
+            Pack type
+            <select class="order-flavor" name="flavor" required></select>
+          </label>
+          <label class="order-field order-field-qty">
+            Quantity
+            <input class="order-qty" type="number" name="quantity" min="1" max="99" value="1" required />
+          </label>
+        </div>
+        <div class="order-line-actions" data-order-line-actions hidden>
+          <button type="button" class="order-line-remove" data-remove-line aria-label="Remove this item">
+            Remove this item
+          </button>
+        </div>
+      </div>
+    </template>
+
+        <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="logo footer-logo" href="index.html"><img src="images/logo.png" alt="" width="80" height="80" /><span class="logo-text">Connie's Cake Shop</span></a>
+          <p>Couture cakes, catering &amp; poised décor.</p>
+          <p class="footer-hours"><strong>Hours</strong><br />Mon–Sat · 9:00–18:00<br />Sunday · By appointment</p>
+        </div>
+        <div>
+          <p class="footer-heading">Quick links</p>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="order.html">Order Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Our Services</p>
+          <ul class="footer-links">
+            <li><a href="celebration-cakes.html">Celebration Cakes</a></li>
+            <li><a href="wedding-cakes.html">Wedding Cakes</a></li>
+            <li><a href="catering.html">Catering &amp; Pastries</a></li>
+            <li><a href="poised-decor.html">Poised Décor</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Connect</p>
+          <div class="footer-socials">
+            <a class="btn btn-whatsapp" href="https://wa.me/260970391674" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a class="btn btn-instagram" href="https://www.instagram.com/connies_cakeshop?igsh=MXNkOHZtdmk0Ynd3bA==" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="btn btn-tiktok" href="https://www.tiktok.com/@connies_cakeshop?_r=1&_t=ZS-98Bi15iwoNg" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <a class="btn btn-ghost btn-social-light" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a class="btn btn-ghost btn-social-light" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
+          </div>
+          <p class="footer-phones">
+            <a href="tel:0972107613">0972107613</a>
+            <span aria-hidden="true">·</span>
+            <a href="tel:0970391674">0970391674</a>
+          </p>
+        </div>
+      </div>
+      <div class="container footer-copy">
+        <p class="muted">© <span data-year></span> Connie's Cake Shop. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="shop-sync.js"></script>
+    <script src="email-config.js"></script>
+    <script src="menu-items.js"></script>
+    <script src="shop-data.js"></script>
+    <script src="script.js"></script>
+    <script src="order.js"></script>
+  </body>
+</html>
